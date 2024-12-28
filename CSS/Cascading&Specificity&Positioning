@@ -1,0 +1,102 @@
+Cascading  :
+
+User - Agent - Style sheet 
+
+This is the sheet that is responsible to give default styles for elements initially.
+
+  Cascading :
+  means downflow. The last action will take its place and all the remaining before gets  ignored.
+
+  h1{
+  color: blue;
+  }
+
+  h1{
+  color: red;
+  }
+
+  h1{
+  color: green
+  }
+
+  So finally, green will take action.
+
+  This is why called as cascading style sheets.
+
+---------------------------------------------------------------
+  Specificity :
+
+  This is the most important part of Cascading. This gives the priority for the elements in case of styling.....
+
+   !important > inline Styling > id Selectors > class selectors > element selectors
+
+  for each styling,priority will be in this format : (id,class,element)
+
+
+h1  	0,0,1
+.test	0,1,0
+h1.test 0,1,1
+#try	1,0,0
+
+
+#try ul div .test h2   (1,1,3)
+
+#try span img #test .main header   (2,1,3)
+
+----------------------------------------------------------------
+
+Inheritance :
+
+the parent properties will be applied to the child elements also. But there are some properties which cannot be passed down. 
+
+Properties will be inherited from the nearest ancestor only.....
+
+But, if we want to inherit from parent, then using : inherit property will inherits from parent.
+
+----------------------------------------------------------
+
+Positioning  :
+placing things on different positions is known as positioning.....
+
+By default, position is static.
+
+there are different types of positioning............
+
+
+^^^^^Relative Positioning :
+ 
+Moving a box/element to a different position from the original one, is known as relative positioning..
+
+position:relative;
+right:15 px;
+
+
+^^^^^^Absolute Positioning : 
+
+position: absolute;
+
+Moving a box/element to a different position from the default container(body), is known as relative positioning..
+
+
+bottom: 2px;
+will move 2px above from the body bottom...........
+
+if we want to move from the parent container, then we need to set parent container to relative, then only it gets positioned from the parent container.
+
+
+
+
+^^^^^ fixed positioning :
+
+If we want to fix a position on the page, then we use this positioning.....
+position: fixed;
+
+
+^^^^^ sticky positioning :
+
+This will be fixed to the parent container only. This will also be in a fixed position upto it's container only....
+
+Sticky positioning stays fixed inside home but fixed positioning is fixed everywhere  
+
+
+--------------------------------------------

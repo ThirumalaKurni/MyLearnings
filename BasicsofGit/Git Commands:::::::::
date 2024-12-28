@@ -1,0 +1,153 @@
+Git Commands:::::::::
+
+
+Branches::
+
+Branch stand for independent version/line of development.
+Git - Default Branch : master
+Github - Default : main
+
+
+working 	|  Staging 	| 	Local		|	Remote
+Directory	|	Area 	|	Repository	|	Repository 
+
+
++++++++++++++++++
+
+Why Staging Area is needed?
+Why Because,whatever present in staging area will be commited at once, we cannot commit some and remove others.
+So, staging area was there to add and remove necessary ones,to be pushed to local Repo.
++++++++++++++++++
+
++++++++++++++++++
+
+for pushing into a remote vcs:
+we use following commands:
+
++++++++++++++++++
+git remote add origin http://.....
+
+tells git to add new remote repo as origin,to do further tasks, uses origin as short hand notation.
++++++++++++++++++
+git push origin master/main(based on which branch we are present)
+
+since in the previous step we added url as origin,we use origin instead of full link.
+
+and then pushing our local master repo to the destinated repo.
+
++++++++++++++++++
+git push -u origin master/main(to provide easy pushing to remote vcs in future)
+
++++++++++++++++++
+
+
+
++++++++++++++++++
+
+To Create a new Branch
+
+git branch branch_Name (current Head)
+
+git branch branch_Name hashcodeOfCommit (on a specific commit) 
+
++++++++++++++++++
+
++++++++++++++++++	
+
+To switch into that branch
+
+git checkout branch_Name
+
++++++++++++++++++
+
++++++++++++++++++
+
+To rename a Branch Name
+
+git branch -m oldName newName  // only for local repo......
+
+//for remote repo.....delete the existing branch.....and push again with new branch.
+
+git push origin --delete oldName
+
+git push -u origin newName. 
+
+
+
++++++++++++++++++
+
++++++++++++++++++
+
+
+
+
+
+
+
+
+
++++++++++++++++++
+git merge    vs git rebase
+git merge branch -> this will merge bugFix branch into  currently active branch.
+
+git rebase main -> this will merge the current branch(for ex:if we are on bugFix, then bigFux will rebased to main) into given destination branch.
+
+
+git merge bugFix - tells bugFix to attach to current Branch.
+git rebase bugFix - tells current Branch to bugFix.
+
++++++++++++++++++
+
+
++++++++++++++++++
+git reset  - for local repo
+
+This is used to go a step backward in the commit tree. To undo a commit in a local repo.
+
+git revert - for remote repo
+
+This is used to undo a commit in remote repo a step backward. But instead of going one step backward,it will create a new commit with the mentioned commit.
+
+git reset HEAD~4
+git revert HEAD~3
+
+git reset will remove all the files from the staging area to working directory.
+If we want to remove only required files from staging area, then use restore command....
+
+git restore --staged fileName
+
+
++++++++++++++++++
+
+
++++++++++++++++++
+git diff - to see the differences in any file or entire directory with the previous commit.
+
+git diff --staged to see differences in the files that are in staged area to the previous commit.
+
+
+git diff commit1Hash..commit2Hash  to see differences between two commits.
++++++++++++++++++
+
+
+
+
++++++++++++++++++
+git rm vs rm
+
+git rm fileName will remove the file and automatically tracks it down and adds to staged area.
+
+rm fileName will remove files in present working directory, but the git will not recognize it, so we need to add the files to staging area ourselves......
+
+--------------------
+
+++++++++++++
+
+amend - flag is used to rename the commit message of the previous commit only.
+
+git commit --amend
+
+if asked to change commit message of any previous commits in the branch, then go it that specific commit by HEAD~2 and then change it.
+
+git rebase -i HEAD~3
+then change pick to edit and then enter, then add new commit message and the rebase here will arrange all the copies from the previous branch.

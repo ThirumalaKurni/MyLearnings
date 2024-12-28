@@ -1,0 +1,51 @@
+Basic Commands
+
+In terminal : thirumal@thirumal-VivoBook-ASUSLaptop-X515JAB-X515JA 
+means userName@hostName.
+
+
+ls = to list the sub Directories and files
+ls -l = to list the brief details of that specific file.
+
+cat = to print the contents in the file.
+cat "add String" > myfile.txt = this command will replace the entire content with the given content.
+cat "add String " >> myfile.txt = this will append the given input at the end of the file.
+
+globstar (**) -> it is used to check recursively for a pattern in current directory as well as all of its sub-directories.
+
+for ex: rm **/*.log  
+
+
+Difference between .(dot), ..(double dot), ~ (tildo), - (dash)
+
+. (dot) -> represent current Directory.
+..(double dot) -> represent parent Directory
+~ (tildo) -> represents the current user's home directory.
+- (dash) ->  has many cases 
+		for ls -> it is used to represent flags.
+		for directory -> means previous directory.
+
+mkdir - to create directories.
+mkdir -p path - to create the parent directoires if not available.
+for ex: mkdir -p hello/uno/first/two
+it creates hello,uno,first,two directories.
+
+touch - to create files.
+
+man command is used to open manual.
+man man will open linux manual.
+To search in manual,we press /, then the command info we need. and then to go next occurance, we press n.
+
+
+find Command - used to search for files in a directory hierarchy.
+
+It goes like......
+
+ 		find  pathName  byWhichYouNeedToSearch(by name,type) pattern/fileType
+ 		find . -type f -name thirumal
+
+
+lspci - to list all the peripheral connected devices.
+lscpu - to list the cpu configuration/Architechture.
+lshw - to list the hardware details.
+

@@ -1,0 +1,149 @@
+html
+
+HTML -Hypertext Markup Language
+
+This provide the content for a webpage to be displayed.
+
+
+tags -------- tags are the components of a document, that encloses an element and the content.
+
+
+attributes --- used to add additional properties for html tags.
+
+for ex: src,alt in img tag, style for anchor tag, href for anchor tag....
+
+elements ------
+
+
+
+
+
+
+
++++++++++++++++++++++++++
+semantic tags -->
+
+    <!-- while using div is accepted,but we will not be able to identify uniqely. -->
+    <!-- so for that only semantic tags were introduced -->
+     <!-- Semantic tags are like: 
+        header
+        footer
+        aside
+        article
+        section
+        nav -->
+    
+        <!-- Basically used for readability and to have cleaner work
+
+---------------------------------
+
++++++++++++++++++++++++++++++
+
+Lists in Html 
+     Lists are used to organize a set of related items.
+            There are three types of lists
+            unordered list - no specific order
+
+            <ul>
+            <li> </li>
+            </ul>
+
+            ordered list   - ordering is done here
+
+            <ol>
+            <li> </li>
+            </ol>
+
+            descriptive lists  - used to add descriptions to the terms
+
+            <dl>
+            <dt>coffee</dt>
+            <dd>costs 50 euros</dd>
+            </dl>
+
+-------------------
+
+
++++++++++++++++++++++++++
+	
+		Tables
+
+Tables are a structured way to organize the data in rows and columns.
+
+tables consists of two parts
+
+table head  -  Header row to say what column is going to be stored
+table body  -  all the relevant data
+
+	<table>
+		<caption>Table Heading</caption>
+        <thead>
+            <th></th>
+            <th></th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+-------------------------------
+
+
++++++++++++++++++++++++++++++++++
+
+			Forms
+
+<h1>Surver Form</h1>
+        <form action="">
+            <label>FirstName</label>
+            <input type="text"/>
+            <label for="">lastName</label>
+            <input type="text"/>
+
+            <label for="">email</label>
+            <input type="email"/>
+
+            <label for="">password</label>
+            <input type="password"/>
+
+            <label for="">date</label>
+            <input type="date"/>
+
+
+            <label for="">Burgers</label>
+            <input type="checkbox"/>
+
+            <label for="">annam Pappu</label>
+            <input type="checkbox"/>
+
+            <label for="">Male</label>
+            <input name="gender" type="radio"/>
+            <label for="">Female</label>
+            <input name="gender"  type="radio"/>
+            
+            <label for="">Mobile Number</label>
+            <input type="number" pattern="\d{10}" maxlength="10"/>
+
+            <p>Faviourite Colour </p>
+            <select name="" id="">
+                <option value="">Blue</option>
+                <option value="">Green</option>
+                <option value="">Red</option>
+            </select>
+
+            <button> Submit</button>
+
+        </form>
+
+------------------------------
+

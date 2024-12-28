@@ -1,0 +1,50 @@
+Box Model
+
+In an HTML page, every element is displayed in box. 
+Box Model:
+				Margin
+				Border
+				Padding
+				Content
+In this way, every box consists of these tags around four sides.
+
+margin: to give space outside the box, basically to seperate from the other elements.
+padding: to give the space inside the box itself. By defaulty,when given padding it takes extra space outside the box.
+But to get padding inside the box, we need to use:
+
+*{											// * to add all the page
+box-sizing: border-box;
+}
+
+border : to create the borders around the box. 
+border : 2px black solid;   dotted dashed
+
+
+
+
+
+
+
+
+
+Different ways to give margin, border, and padding
+
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+
+ to add specifically.
+
+ Other Way is to :
+
+ padding: 10px 20px 30px 15px;
+ padding: top right bottom left;
+
+ padding: 10px 20px;
+ padding: top&bottom left&right;
+
+ padding: 10px 15px 20px;
+ padding:  top left&bottom right;
+
+ All these can be replaced with margin and border also.

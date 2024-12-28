@@ -1,0 +1,27 @@
+Media Queries : 
+
+Purpose of media queries:
+    used to display the elements based on screen size.
+
+/* min-width is to say, if screen has minimum width then apply this transistion.  */
+@media only screen and ( min-width:400px){
+    body{
+        background-color: #e00808;
+    }
+}
+
+
+/* min-width is to say, if screen has maximum width then apply this transistion.  */
+@media only screen and ( max-width:400px){
+    body{
+        background-color: #2230aa;
+    }
+}
+
+/* Applying both to the screen.  */
+
+@media only screen and (min-width:700px) and (max-width:1200px){
+    body{
+        background-color: green;
+    }
+}

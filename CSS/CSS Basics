@@ -1,0 +1,94 @@
+CSS Basics
+CSS - Cascading Style Sheets
+
+These are used to add styles to the html page
+
+
+We can add css to the html in three ways.
+
+   	1. Inline
+   	2. Internal
+   	3. External
+
+Based on the use case we can use the type of styling. Mostly prefer External, because It could improve readability and easy for debugging also.
+
+Precidence Order:
+
+Inline > Internal > External
+
+
++++++++++++++++++++++++++++++
+Block Elements: These are the elements that take full width of the screen
+ex: div, headings, p.....
+
+Inline Elements: These are the elements that take only content width
+ex: span, input, label,a,
+
+
+So, inorder to make display elements on the user requirement, we use display command.
+display:block;
+display:inline;
+-----------------------------
+
+ Selectors
+
+     1.Element Selectors 
+
+     Styling is given for elements. It will add styling to 
+     all the elements present in the file 
+
+
+     2. Class and Ids
+
+
+	If we add element selector styling,then whole below h1 tags will be applied
+     But we want different styling for different tags.
+    Thats when comes classes and ids 
+    Best Practice : same class can be given to two tags,
+    but give unique id for each tag
+    .class
+    #id
+
+     3. Descendent Selectors
+     This selector is used to add style by using heirarchy. 
+
+     div ul li{
+		    background-color: red;
+		}
+
+     4. Children Selectors
+
+       In the below given case, if we use descendent selector to
+	    style element, it will add to both divs here, which is not recommended.
+	    So, to solve this we have Children Selectors
+	    Children Selectors will only apply to the direct children only.
+
+	    div>h1>span{
+		    background: green;
+		}
+
+      Difference between descendent and Children
+
+
+
+ Descendent Selectors       Children Selectors
+
+ Grand Parent                Grand Parent
+    ^   ^                           ^     
+    |   |                           |   
+ Parent |                         Parent
+    ^   |                           ^
+    |   |                           |
+ Children                       Children
+
+There will be no connection to the ancestors in Children Selectors.
+
+
+
+attribute Selector  
+
+Styling based on attributes  
+
+ input[type="button"]{
+    color: blue;
+ }

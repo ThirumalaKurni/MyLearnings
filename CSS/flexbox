@@ -1,0 +1,59 @@
+flexbox
+
+
+
+display:flex    
+tells that we are going to use flexbox properties, and to embed all the flexbox properties.
+Basically used on top of all the containers.
+
+There will two axis : main axis, cross axis.
+
+
+
+By defaultly::::::::::
+										|
+										|
+										|
+										|
+										|
+										|
+					--------------------|-----------------------Main Axis
+										|
+										|
+										|
+										|
+										|
+										|Cross Axis
+
+
+This is important because, some properties like justify-content will work only on main axis, and align-content works on cross axis only..............
+
+To reverse the direction of the axis::::::::::::::::
+we use :
+
+flex-direction: column;
+
+this is will change the axis......
+
+
+
+Now to put the content in the center/end/ or anyway.....we use
+justify-content:center;
+
+And
+align-content:center;
+works on cross axis to center the content.......
+
+
+flex-wrap: wrap 
+if the elements grow out of the flexbox,then this property will tell to wrap down the boxes.
+
+Here the size of the box remains......
+
+flex-basis,flex-grow,flex-shrink
+
+flex-basis- will tell base width of the flex box
+flex-grow- will tell at which rate the box should grow
+flex-shrink- will tell at which rate it should shrink
+
+Here size of the box changes automatically...........

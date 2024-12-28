@@ -1,0 +1,86 @@
+Processes and Ports
+
+Process : Simply an instance of a program is a process. It is used to manage the execution of a program.
+
+A program can have multiple instances of processes, and each of them are unique, and are differentiated by process Ids.
+
+There are two types of processes:
+1- foreground Processes : happens on the screen
+2  Background Processes : happens on the backGround of the applications. for ex( In ms-word, we have spell correction,which happens background.)
+
+ Commands :
+
+1. top : It is used to display all the process running at the moment in real time.
+
+PID - process Ids
+USER - users running the process
+PR   - Priority (-20 to 20)
+NI   - Nice value
+VIRT - Virtual Memory Used
+RES  - Physical Memory Used
+SHR - Shared Memory Used
+S - Status of the process 
+There are five types of processes:
+
+1. D - uninterruptable Sleep
+2. R - Running
+3. S - Sleeping 
+4. T - Traced or Stopped
+5. Z - Zombie
+
+
+
+PS Utility:
+
+ps - to give status of processes running for a user
+ps ux - to give all processes
+pidof - used to get all the pids associated with the app/program.
+for ex: pidof firefox
+
+kill PID- used to terminate the process
+for ex: kill 6204
+
+ Niceness value : It is used to tell the os about the priority of the process.
+  ranges from -20 to 19 : lower the nicesness higher the priority
+
+  	-20 more Priority
+  	19  Less Priority
+
+  	Default value of all processes is 0.
+
+ To give niceness based on our need we use:
+
+ nice -n value program
+ nice -n 10 firefox
+
+to give niceness value for already running process
+
+renice nicevalue -p PID
+renice -20 -p 6302
+
+
+df -h -> gives free hard disk space availble on the system.
+free -h -> gives free RAM space availble on the system.
+
+
+
+top
+and then n -> to print the required number of processes
+and then M -> sort based on memory usage
+and then P -> sort based on CPU usage
+
+
+
+
+Ports are done in networking concepts part.......
+
+
+
+
+
+
+
+
+
+
+

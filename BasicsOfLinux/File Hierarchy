@@ -1,0 +1,26 @@
+File Hierarchy
+
+
+
+root (or) / ---- this is the parent directory of all.
+
+
+bin ------stores the binary executables,which can be run by the user from CLI.
+sbin ----- stores the SYSTEM binary executables,which can be run by the Super user.
+lib ------ stores the common libaries/dependency files of both bin and sbin.
+
+usr --------has two directories 
+
+		local ------- contains the binary executables that we compilled manually.
+		bin  ------- to store user specific binary executables.
+
+home ------- contains different users directories/files.
+opt -------- optional packages are stored here.(google,zoom)
+temp ------ used to store temporary files, which will cleaned up as soon as we reboot.
+boot ------ contains essential files to boot/start the system.
+dev ------- contains device files, like hardware related files.
+proc ------- it's like virtual file during runtime.
+etc ------ (editable text configuration files) used to store configuration files needed by the system.
+
+
+
